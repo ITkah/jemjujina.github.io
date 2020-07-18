@@ -74,8 +74,8 @@ $(document).ready(function() {
         centerPadding: '60px',
         slidesToShow: 3,
         arrows: true,
-        speed: 600,
-        dots:false,
+        speed: 650,
+        dots: false,
         responsive: [
           {
             breakpoint: 990,
@@ -100,6 +100,17 @@ $(document).ready(function() {
         ]
     });
 
-
+//     var bLazy = new Blazy({
+//         breakpoints: [{
+//         width: 420,
+//         src: 'data-src-small'
+// 	}]
+//       , success: function(element){
+// 	    setTimeout(function(){
+// 		var parent = element.parentNode;
+// 		parent.className = parent.className.replace(/\bloading\b/,'');
+// 	    }, 200);
+//         }
+//    });
 
 });
