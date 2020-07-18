@@ -1,0 +1,84 @@
+.intresting_container {
+    position: relative;
+    z-index: 99;
+    padding: 90px 0;
+    @media (max-width: 1280px) {
+        padding: 50px 0;
+    }
+    @media (max-width: 990px) {
+        padding: 30px 0;
+    }
+    @media (max-width: 768px) {
+        padding: 20px 0;
+    }
+    .intresting_title {
+        margin-bottom: 60px;
+        @media (max-width: 990px) {
+            margin-bottom: 20px;
+        }
+    }
+    .intresting_wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+        }
+    }
+    .intresting_box {
+        padding: 40px 30px;
+        background: #FFF;
+        border-radius: 7px;
+        display: grid;
+        grid-template-columns: 70px 1fr;
+        grid-gap: 30px;
+        align-items: center;
+        box-shadow: -2px 4px 26px rgba(0, 0, 0, .2);
+        @media (max-width: 1100px) {
+            padding: 20px;
+        }
+        @media (max-width: 576px) {
+            grid-gap: 15px;
+            grid-template-columns: 1fr;
+        }
+    }
+    .intresting_img {
+        height: 70px;
+        width: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: linear-gradient(90deg, #F09819 0%, #EDDE5D 100%);
+        box-shadow: -2px 4px 26px rgba(238, 198, 69, .36);
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .box_title {
+        letter-spacing: .03em;
+        color: #3D3A39;
+        margin-bottom: 15px;
+        font: bold 1.2rem 'Raleway', sans-serif;
+        @media (max-width: 768px) {
+            margin-bottom: 5px;
+            font: bold 1.125rem 'Raleway', sans-serif;
+        }
+    }
+    .box_text {
+        letter-spacing: 0.02em;
+        color: #3D3A39; 
+        font: normal 1rem/132% 'Raleway', sans-serif;
+        @media (max-width: 768px) {
+            font: normal 1rem/24px 'Raleway', sans-serif;
+        }
+    }
+}
+
+.intresting {
+    .container {
+        background: #F8F8F8;
+    }
+}

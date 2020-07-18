@@ -1,4 +1,26 @@
 $(document).ready(function() {
+
+    $(".menu_click").on("click","a", function (event) {
+        event.preventDefault();
+        $("nav").removeClass("active_menu");
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top - 20;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+
+    $(".footer_arr_top a").on("click", function(e){
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '800');
+    });
+
+    $(".menu_btn").on("click", function(){
+        $("nav").toggleClass("active_menu");
+    });
+    
+    $(".close_menu").on("click", function(){
+        $("nav").removeClass("active_menu");
+    });
+    
     $('.zoom-gallery').magnificPopup({
         delegate: 'a',
         type: 'image',
@@ -22,6 +44,22 @@ $(document).ready(function() {
             }
         }
     });
+
+    $('.image-popup-no-margins').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: false,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300 // don't foget to change the duration also in CSS
+		}
+	});
+
     $('.phone').on('input', function() {
         $(this).val($(this).val().replace(/[A-Za-zА-Яа-яЁё]/, ''));
     });
@@ -29,4 +67,39 @@ $(document).ready(function() {
     $('.name').on('input', function() {
         $(this).val($(this).val().replace(/[0-9,+-_/';:}{}?.<>,()*&^%$#@!]/, ''));
     });
+
+
+    $('.basis_slider').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        arrows: true,
+        speed: 600,
+        dots:false,
+        responsive: [
+          {
+            breakpoint: 990,
+            settings: {
+              arrows: false,
+              dots: true,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              arrows: false,
+              dots: true,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
+    });
+
+
+
 });

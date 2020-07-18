@@ -1,0 +1,96 @@
+.segment_box {
+    overflow: hidden;
+    height: 550px;
+    @media (max-width: 1200px) {
+        height: 300px;
+    }
+    @media (max-width: 576px) {
+        height: 200px;
+    }
+    img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.segment {
+    .container {
+        max-width: 1680px;
+    }
+    .segment_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @media (max-width: 1200px) {
+            grid-template-columns: 2fr 3fr;
+        }
+        @media (max-width: 990px) {
+            grid-template-columns: 1fr;
+        }
+    }
+    .segment_box_two {
+        background: url(../img/segment/segment-bg.png) no-repeat center center/cover;
+        padding: 100px;
+        position: relative;
+        &::after {
+            content: '';
+            background: url(../img/segment/jemj-icon.png);
+            background-size: 220px 240px;
+            height: 240px;
+            width: 220px;
+            position: absolute;
+            right: 0;
+            top: -180px;
+            @media (max-width: 990px) {
+                display: none;
+            }
+        }
+        @media (max-width: 1400px) {
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        @media (max-width: 576px) {
+            padding: 30px 20px;
+        }
+        .title_segment {
+            letter-spacing: .05em;
+            font: 600 1.875rem 'Raleway', sans-serif;
+            color: #F8F8F8;
+            margin-bottom: 30px;
+            @media (max-width: 990px) {
+                font: 600 1.4rem 'Raleway', sans-serif;
+                margin-bottom: 20px;
+            }
+            @media (max-width: 768px) {
+                font: 600 1.2rem 'Raleway', sans-serif;
+            }
+            br {
+                @media (max-width: 576px) {
+                    display: none;
+                }
+            }
+        }
+        .title_text {
+            letter-spacing: .015em;
+            font: normal 1.1rem/170% 'Raleway', sans-serif;
+            color: #C4C4C4;
+            margin-bottom: 75px;
+            @media (max-width: 1400px) {
+                margin-bottom: 40px;
+            }
+            @media (max-width: 990px) {
+                font: normal 1rem/23px 'Raleway', sans-serif;
+                margin-bottom: 20px;
+            }
+            br {
+                @media (max-width: 576px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

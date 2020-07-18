@@ -1,0 +1,41 @@
+.btn_gold {
+    padding: 20px 50px;
+    background: linear-gradient(90deg, #F09819 0%, #EDDE5D 100%);
+    box-shadow: -5px 4px 5px rgba(0, 0, 0, .25);
+    border-radius: 0;
+    border: none;
+    letter-spacing: .02em;
+    font: 600 1rem 'Montserrat', sans-serif; 
+    color: #363535;
+    transition: .3s;
+    @media (max-width: 768px) {
+        padding: 15px 25px;
+    }
+    &:hover {
+        box-shadow: none;
+        color: #000;
+    }
+}
+
+.pretitle_simple {
+    margin-bottom: 5px;
+    color: #CD9968;
+    text-transform: lowercase;
+    font: normal 1.05rem 'Poiret One', cursive;
+    @media (max-width: 990px) {
+        font-size: 1rem;
+    }
+}
+
+.title_simple {
+    letter-spacing: .05em;
+    font: bold 2.185rem 'Raleway', sans-serif;
+    color: #363535;
+    text-align: center;
+    @media (max-width: 990px) {
+        font: bold 1.5rem 'Raleway', sans-serif;
+    }
+    @media (max-width: 576px) {
+        font: bold 1.2rem 'Raleway', sans-serif;
+    }
+}

@@ -1,0 +1,165 @@
+.installment_xl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font: 600 2.31rem 'Raleway', sans-serif;
+    color: #3D3A39;
+    text-align: center;
+    @media (max-width: 990px) {
+        font: 600 1.75rem 'Raleway', sans-serif;
+    }
+    @media (max-width: 576px) {
+        font: 600 1.5rem 'Raleway', sans-serif;
+    }
+    br {
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+}
+
+.installment {
+    .container {
+        position: relative;
+        background: url(../img/installment/installment-bg.png) no-repeat center center/cover;
+        overflow: hidden;
+        @media (max-width: 990px) {
+            height: auto;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1024px;
+        @media (max-width: 1280px) {
+            height: auto;
+        }
+        @media (max-width: 990px) {
+            padding: 30px;
+        }
+        @media (max-width: 700px) {
+            padding: 35px 20px;
+        }
+        @media (max-width: 576px) {
+            padding: 25px 15px;
+        }
+    }
+    .installment_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: 1280px) {
+            padding: 150px 0;
+        }
+        @media (max-width: 700px) {
+            padding: 0;
+        }
+        .installment_box {
+            padding: 100px;
+            background: rgba(255, 255, 255, .2);
+            backdrop-filter: blur(40px);
+            border-radius: 7px;
+            @media (max-width: 1280px) {
+                padding: 40px;
+            }
+            @media (max-width: 768px) {
+                padding: 20px;
+            }
+        }
+        .title_installment {
+            letter-spacing: .05em;
+            font: bold 2.185rem 'Raleway', sans-serif;
+            color: #363535;
+            margin-bottom: 40px;
+            @media (max-width: 990px) {
+                font: bold 1.5rem 'Raleway', sans-serif;
+                margin-bottom: 20px;
+            }
+            @media (max-width: 576px) {
+                font: bold 1.2rem 'Raleway', sans-serif;
+                margin-bottom: 15px;
+            }
+        }
+        .text_installment {
+            letter-spacing: .05em;
+            font: normal 1.2rem/157.8% 'Raleway', sans-serif;
+            color: #000;
+            margin-bottom: 55px;
+            @media (max-width: 990px) {
+                font: normal 1rem/25px 'Raleway', sans-serif;
+                margin-bottom: 30px;
+            }
+            @media (max-width: 576px) {
+                font: normal .95rem/22px 'Raleway', sans-serif;
+            }
+        }
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 1000px;
+            margin: 0 auto;
+            margin-bottom: 100px;
+            @media (max-width: 1280px) {
+                padding: 0 50px;
+            }
+            @media (max-width: 990px) {
+                grid-template-columns: 1fr;
+                margin-bottom: 0;
+                padding: 0 0 0 40px;
+            }
+            li {
+                position: relative;
+                font: 400 1.2rem/23px 'Raleway', sans-serif;
+                color: #000;
+                letter-spacing: .035em;
+                @media (max-width: 990px) {
+                    font: 400 1rem/21px 'Raleway', sans-serif;
+                    margin-bottom: 35px;
+                }
+                br {
+                    @media (max-width: 576px) {
+                        display: none;
+                    }
+                }
+                &::before {
+                    content: '';
+                    height: 35px;
+                    width: 35px;
+                    display: block;
+                    position: absolute;
+                    left: -55px;
+                    top: -6px;
+                    border-radius: 50%;
+                    background: linear-gradient(90deg, #F09819 0%, #EDDE5D 100%);
+                    box-shadow: -2px 4px 26px rgba(238, 198, 69, 0.36);
+                    @media (max-width: 990px) {
+                        height: 30px;
+                        width: 30px;
+                        left: -40px;
+                        top: -4px;
+                    }
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: -41px;
+                    width: 6px;
+                    top: 3px;
+                    height: 11px;
+                    border: solid #000;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(45deg);
+                    @media (max-width: 990px) {
+                        left: -28px;
+                    }
+                }
+            }
+        }
+        .btn_wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
