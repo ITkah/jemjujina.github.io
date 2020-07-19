@@ -1,6 +1,13 @@
 .map {
     .container {
         background: #F8F8F8;
+        padding-top: 80px;
+        @media (max-width: 990px) {
+            padding-top: 40px;
+        }
+        @media (max-width: 576px) {
+            padding: 35px 15px;
+        }
     }
     .map_title {
         text-align: left;
@@ -51,7 +58,7 @@
         }
         @media (max-width: 678px) {
             margin-top: 10px;
-            font: normal 1.5rem/35px 'Poiret One', cursive;
+            font: normal 1.5rem/30px 'Poiret One', cursive;
         }
     }
 }

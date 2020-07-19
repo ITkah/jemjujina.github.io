@@ -444,7 +444,7 @@ header {
           justify-content: center;
   margin: 0 60px;
   position: relative;
-  top: -70px; }
+  top: -62px; }
   @media (max-width: 990px) {
     .bottom_dark .bottom_dark_box {
       top: 5px;
@@ -999,7 +999,11 @@ header {
         display: none; } }
 
 .map .container {
-  background: #F8F8F8; }
+  background: #F8F8F8;
+  padding-top: 80px; }
+  @media (max-width: 990px) {
+    .map .container {
+      padding-top: 40px; } }
   @media (max-width: 576px) {
     .map .container {
       padding: 35px 15px; } }
@@ -2138,6 +2142,9 @@ select,
 a {
   outline: none; }
 
+button, select {
+  cursor: pointer; }
+
 main {
   min-height: -webkit-calc(100vh - 80px);
   min-height: calc(100vh - 80px); }
@@ -2159,3 +2166,7 @@ textarea {
 @font-face {
   font-family: "Abril";
   src: url("../fonts/AbrilFatface-Regular.ttf") format("ttf"); }
+
+.hide {
+  display: none;
+  opacity: 0; }

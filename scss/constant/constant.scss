@@ -4,9 +4,6 @@ html,body {
     box-sizing: border-box;
     overflow-x: hidden;
     background: #fff;
-    // font-family: 'Raleway', sans-serif;
-    // font-family: 'Montserrat', sans-serif;
-    // font-family: 'Poiret One', cursive;
 }
 
 .container {
@@ -69,6 +66,10 @@ a {
     outline: none;
 }
 
+button, select {
+    cursor: pointer;
+}
+
 main {
     min-height: calc(100vh - 80px);
 }
@@ -95,4 +96,10 @@ textarea {
 @font-face {
     font-family: "Abril";
     src: url("../fonts/AbrilFatface-Regular.ttf") format("ttf");
+}
+
+
+.hide {
+    display: none;
+    opacity: 0;
 }

@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    
+    new WOW().init();
 
     $(".menu_click").on("click","a", function (event) {
         event.preventDefault();
@@ -21,28 +23,30 @@ $(document).ready(function() {
         $("nav").removeClass("active_menu");
     });
     
-    $('.zoom-gallery').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        closeOnContentClick: false,
-        closeBtnInside: false,
-        mainClass: 'mfp-with-zoom mfp-img-mobile',
-        image: {
-            verticalFit: true,
-            titleSrc: function(item) {
-                return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+    $('.zoom-gallery').each(function() {
+        $(this).magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            closeOnContentClick: false,
+            closeBtnInside: false,
+            mainClass: 'mfp-with-zoom mfp-img-mobile',
+            image: {
+                verticalFit: true,
+                titleSrc: function(item) {
+                    return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+                }
+            },
+            gallery: {
+                enabled: true
+            },
+            zoom: {
+                enabled: true,
+                duration: 300,
+                opener: function(element) {
+                    return element.find('img');
+                }
             }
-        },
-        gallery: {
-            enabled: true
-        },
-        zoom: {
-            enabled: true,
-            duration: 300,
-            opener: function(element) {
-                return element.find('img');
-            }
-        }
+        });
     });
 
     $('.image-popup-no-margins').magnificPopup({
