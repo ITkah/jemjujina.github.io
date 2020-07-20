@@ -1,3 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 9999; }
+
+.preloader__image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 75px;
+  height: 75px;
+  margin-top: -35px;
+  color: #F09819;
+  margin-left: -35px;
+  text-align: center;
+  -webkit-animation: preloader-rotate 2s infinite linear;
+          animation: preloader-rotate 2s infinite linear; }
+
+@-webkit-keyframes preloader-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes preloader-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+.loaded_hiding .preloader {
+  -webkit-transition: .3s opacity;
+  -o-transition: .3s opacity;
+  transition: .3s opacity;
+  opacity: 0; }
+
+.loaded .preloader {
+  display: none; }
+
 header {
   position: absolute;
   width: 100%;
@@ -212,7 +257,7 @@ header {
           transform: translateX(0); }
 
 .main_section .container {
-  height: 790px;
+  height: 84vh;
   background: url(../img/main-section/main-section.png) no-repeat center center/cover; }
   @media (max-width: 990px) {
     .main_section .container {
@@ -2163,10 +2208,11 @@ ul {
 textarea {
   resize: none; }
 
-@font-face {
-  font-family: "Abril";
-  src: url("../fonts/AbrilFatface-Regular.ttf") format("ttf"); }
-
 .hide {
   display: none;
   opacity: 0; }
+
+@font-face {
+  font-family: "Abril";
+  src: url("../fonts/AbrilFatface-Regular.ttf") format("ttf");
+  font-display: swap; }
